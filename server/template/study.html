@@ -1,0 +1,127 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>lingkong-robot</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+<link href="{{static_url('bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="{{static_url('dashboard.css')}}" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">lingkong-robot</a>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+
+        <ul class="nav flex-column">
+
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <span data-feather="home"></span>
+              介绍
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/log">
+              <span data-feather="file"></span>
+              日志
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/study">
+              <span data-feather="users"></span>
+              修改配置项教程 <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ds">
+              <span data-feather="shopping-cart"></span>
+              打赏
+            </a>
+          </li>
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>功能</span>
+          <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report"></a>
+        </h6>
+
+        <ul class="nav flex-column mb-2">
+
+          <li class="nav-item">
+            <a class="nav-link" href="/dh">
+              <span data-feather="bar-chart-2"></span>
+              对话
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/list">
+              <span data-feather="file-text"></span>
+              清单
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="container">
+        <h1 class="mt-5">修改配置项教程</h1>
+        <p class="lead">代码中药自行改动apikey和userid的地方不多，除了技能里的</p>
+        <p class="lead">因为tts、asr都没有调用次数限制，所以这个问题不大</p>
+        <p class="lead">唯独技能部分，一些服务会做访问限制，所以建议自己换上appkey</p>
+        <p class="lead">还有的要改的就是访问城市的部分，城市要改为自己（使用者）的</p>
+        <p class="lead">更换方法：</p>
+        <p class="lead">以图灵为例：在代码中的def jineng(jn_hua):下的def tuling(t_hua):里面我有标注：#请自行在这里修改城市为自己的城市 请自己换左边的“福州”为自己的城市，引号不要去掉。</p>
+        <p class="lead">还有就是下面有一段比较长的备注的上面有5个apikey，请自行替换为自己的5个或者上网查一些资料更改代码为3个或者2个或者1个</p>
+        <p class="lead">apikey改完还有一个也要改，就是下面有一个注释为：#如果你改了apikey，请把这也改了 的左边引号里的userid也要改，改成你图灵机器人机器人管理页面右上角的数字/字符（也就是你的图灵机器人用户名）</p>
+        <p class="lead">按照以上例子自行修改所有jineng下要改的东西，改完之后配置项就修改完成了。因工期问题没把这些东西抽成config，在此感到抱歉，后期会进行考虑的</p>
+        <p class="lead">有任何问题欢迎去文档找到作者联系方式以联系作者</p>
+        <p class="lead">感谢支持！！！</p>
+        <p class="mt-5 mb-3 text-muted">&copy; 灵空 2019-2020</p>
+      </div>
+    </main>
+
+
+  </div>
+</div>
+<script src="{{static_url('jquery-3.4.1.min.js')}}" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="{{static_url('bootstrap.bundle.min.js')}}" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+        <script src="{{static_url('feather.min.js')}}"></script>
+        <script src="{{static_url('Chart.min.js')}}"></script>
+        <script src="{{static_url('dashboard.js')}}"></script></body>
+</html>
