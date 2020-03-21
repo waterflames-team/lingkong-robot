@@ -1,4 +1,4 @@
-# 灵空机器人[![star](https://gitee.com/lingkonggzs/lingkong-robot/badge/star.svg?theme=gray)](https://gitee.com/lingkonggzs/lingkong-robot/stargazers)[![fork](https://gitee.com/lingkonggzs/lingkong-robot/badge/fork.svg?theme=gray)](https://gitee.com/lingkonggzs/lingkong-robot/members)![主要语言](https://img.shields.io/badge/语言-python3-white.svg)![版本](https://img.shields.io/badge/版本-V0.5.9.200321-white.svg)
+# 灵空机器人[![star](https://gitee.com/lingkonggzs/lingkong-robot/badge/star.svg?theme=gray)](https://gitee.com/lingkonggzs/lingkong-robot/stargazers)[![fork](https://gitee.com/lingkonggzs/lingkong-robot/badge/fork.svg?theme=gray)](https://gitee.com/lingkonggzs/lingkong-robot/members)![主要语言](https://img.shields.io/badge/语言-python3-lightgrey.svg)![版本](https://img.shields.io/badge/版本-V0.5.9.200321-lightgrey.svg)
 
 ----
 * 灵空机器人是一个灵活可配的中文语音对话机器人，并根据    wukong-robot进行改编（改编部分较多，主要借鉴了悟空后台端）。
@@ -20,6 +20,7 @@
 - [后台](#后台)
 - [在线版与本地版的区别](#在线版与本地版的区别)
 - [在线版功能](#在线版功能)
+- [开发者计划](https://gitee.com/lingkonggzs/lingkong-robot/tree/master/%E5%BC%80%E5%8F%91%E8%80%85%E8%AE%A1%E5%88%92%E7%9C%8B%E8%BF%99%E9%87%8C)
 
 # 运行方式：
 ----
