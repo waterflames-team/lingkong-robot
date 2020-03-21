@@ -22,6 +22,7 @@
 
 # 运行方式：
 ----
+* snowboy→baidu_asr→技能库→baidu_tts
 
 # 最新版本：
 ----
