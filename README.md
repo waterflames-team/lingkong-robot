@@ -17,10 +17,11 @@
 - [适配](#适配)
 - [运行](#运行)
 - [技能](#技能)
+- [开发者计划](https://gitee.com/lingkonggzs/lingkong-robot/tree/master/%E5%BC%80%E5%8F%91%E8%80%85%E8%AE%A1%E5%88%92%E7%9C%8B%E8%BF%99%E9%87%8C)
 - [后台](#后台)
 - [在线版与本地版的区别](#在线版与本地版的区别)
 - [在线版功能](#在线版功能)
-- [开发者计划](https://gitee.com/lingkonggzs/lingkong-robot/tree/master/%E5%BC%80%E5%8F%91%E8%80%85%E8%AE%A1%E5%88%92%E7%9C%8B%E8%BF%99%E9%87%8C)
+
 
 # 运行方式：
 ----
