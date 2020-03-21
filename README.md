@@ -6,7 +6,7 @@
 
 # 运行方式：
 
-## 图灵+技能+snowboy+baidu\_tts、asr
+## snowboy→baidu_asr→技能库→baidu_tts
 
 # 最新版本：
 
