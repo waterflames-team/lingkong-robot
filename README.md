@@ -1,7 +1,7 @@
 # 灵空机器人[![star](https://gitee.com/lingkonggzs/lingkong-robot/badge/star.svg?theme=gray)](https://gitee.com/lingkonggzs/lingkong-robot/stargazers)[![fork](https://gitee.com/lingkonggzs/lingkong-robot/badge/fork.svg?theme=gray)](https://gitee.com/lingkonggzs/lingkong-robot/members)![主要语言](https://img.shields.io/badge/语言-python3-lightgrey.svg)![版本](https://img.shields.io/badge/版本-V0.5.9.200321-lightgrey.svg)
 
 ----
-* 灵空机器人是一个由非凡小王开发、灵空团队维护的灵活可配的中文语音对话机器人，并根据    wukong-robot进行改编（改编部分较多，主要借鉴了悟空后台端）。
+* 灵空机器人是一个由非凡小王开发、折腾调协助维护的灵活可配的中文语音对话机器人，并根据    wukong-robot进行改编（改编部分较多，主要借鉴了悟空后台端）。
 * 灵空机器人可以做到语音唤醒，语音对话，正常的闲聊，以及查询天气等实用工具
 # 跳转
 ----
