@@ -93,7 +93,7 @@
 
 * 首先你要下载好0.5.9.200321版的灵空机器人
 ```shell
-git clone https://gitee.com/lingkonggzs/lingkong-robot-bata.git
+git clone https://gitee.com/lingkonggzs/lingkong-robot.git
 ```
 
 ### 开始安装：
@@ -121,7 +121,7 @@ cd lingkong-robot
 
 1. 首先你要下载好0.5.9.200321版的灵空机器人
 ```shell
-git clone https://gitee.com/lingkonggzs/lingkong-robot-bata.git
+git clone https://gitee.com/lingkonggzs/lingkong-robot.git
 ```
 2. 首先你要保证你已经安装了python3和pip3，没安装的可以百度
 
@@ -152,7 +152,7 @@ sudo sh change.sh
 ----
 ### 第一步：
 
-#### 用终端cd进lingkong-robot版本号
+#### 用终端cd进lingkong-robot
 
 ### 第二步：
 
@@ -183,7 +183,7 @@ make
 ----
 ### 如果你刚刚配置完，那么请重复输入几次`cd ../`直到回到lingkong-robot版本号
 
-### 回到lingkong-robot版本号之后运行：
+### 回到lingkong-robot之后运行：
 ```shell
 python3 lingkong.py
 ```
@@ -326,13 +326,13 @@ python3 lingkong.py
 
 ## 后台
 ----
-### 0.5.7.200316版本的后台目前已有以下功能：
+### 0.5.7.200316以上版本的后台目前已有以下功能：
 
 介绍：灵空机器人的基本介绍和文档跳转
 
 日志：本地的运行日志
 
-修改配置项教程：教你0.5.7.200316版怎么修改配置项（将在1或2版本改为直接更改配置）
+修改配置项教程：教你0.5.7.200316以上版怎么修改配置项（将在1或2版本改为直接更改配置）
 
 打赏：对作者非凡小王的打赏（厚颜无耻，手动滑稽）
 
@@ -346,7 +346,7 @@ python3 lingkong.py
 
 方案一：部分手机横屏就可以出现左侧菜单
 
-方案二：记住路径（"/"为介绍页，"/ds"是打赏页,"/log"是日志页,"/study"是修改配置项教程页,"/dh"是对话页,"/list"是清单页，此路径适用于0.5.7.200316版）
+方案二：记住路径（"/"为介绍页，"/ds"是打赏页,"/log"是日志页,"/study"是修改配置项教程页,"/dh"是对话页,"/list"是清单页，此路径适用于0.5.7.200316以上版）
 
 
 
