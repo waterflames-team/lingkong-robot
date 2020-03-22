@@ -40,25 +40,6 @@
 > * 后续会在近2.0版本完善好大部分的体验，争取有和xiaolan（蓝之酱作品）、wukong（wzpan作品）一样的体验
 
 
-# 运行环境
-----
-> * 1.使用者如是win平台，那么请去deepin官网和virtualbox官网下载deepin的镜像和virtualbox的安装包，然后进行安装、装载镜像
->> * 2.如果你刚安装好deepin，请执行
-```shell
-    sudo apt update
-    sudo apt-get install git
-```
-安装git，然后自行确定你的deepin有没有python3环境（正常来说是有的）
-
-
-* 使用者如是Mac平台，那么可以直接开始安装了
-
-* 使用者如果是deepin平台，那么参考win平台的方法
-
-* 使用者如是非deepin的linux平台，那你可以暂时参考一下debian的安装方法，如有问题，欢迎通过下面的联系方式，联系作者
-
-
-
 # 联系作者
 ----
 
@@ -87,6 +68,24 @@
 
 #### \* 灵空技能
 （进仓库里的开发者计划的文件夹里看详细介绍）
+
+
+# 运行环境
+----
+> * 1.使用者如是win平台，那么请去deepin官网和virtualbox官网下载deepin的镜像和virtualbox的安装包，然后进行安装、装载镜像
+>> * 2.如果你刚安装好deepin，请执行
+```shell
+    sudo apt update
+    sudo apt-get install git
+```
+安装git，然后自行确定你的deepin有没有python3环境（正常来说是有的）
+
+
+* 使用者如是Mac平台，那么可以直接开始安装了
+
+* 使用者如果是deepin平台，那么参考win平台的方法
+
+* 使用者如是非deepin的linux平台，那你可以暂时参考一下debian的安装方法，如有问题，欢迎通过下面的联系方式，联系作者
 
 
 # 安装环境（Mac）
