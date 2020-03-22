@@ -187,6 +187,7 @@ make
 ```shell
 python3 lingkong.py
 ```
+### 然后说出唤醒词“snowboy”即可唤醒
 ## 技能
 ----
 ### 闲聊（图灵）：
