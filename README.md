@@ -5,7 +5,7 @@
 * 灵空机器人可以做到语音唤醒，语音对话，正常的闲聊，以及查询天气等实用工具
 # 跳转
 ----
-[灵空文档](http://docs.lingkong-robot.cn)(包括灵空在线和灵空本地的使用说明)/[灵空在线](http://server.lingkong.store/)（账号随意，密码12345）
+[灵空文档](http://docs.lingkong-robot.cn)(包括灵空在线和灵空本地的使用说明)/[灵空在线](http://server.lingkong.store:88/)（账号随意，密码12345）
 # 目录
 ----
 - [运行方式](#运行方式)
