@@ -128,14 +128,6 @@ git clone https://gitee.com/lingkonggzs/lingkong-robot.git
 ```shell
 sudo curl -L http://download.lingkong-robot.online/change.sh | sudo bash
 ```
-3.
-```shell
-cd lingkong-robot
-./install.sh
-```
-
-* 到这里你的环境安装就完成了
-
 ***（如果换源时长时间没有动静，那么是需要密码的，执行完一键命令后输入用户密码再按下回车就可以换源啦）***
 
 ***(如果换源时出现“need root”或者没有更换成功，那么请手动下载：***
@@ -145,6 +137,15 @@ sudo sh change.sh
 ```
 ***注意：这两条是需要分别执行的！！！在执行第二句时可能需要密码！输入并按下回车即可！！！）***
 ### 如果你安装不成功，那么请去文档的介绍页联系作者
+
+3.
+```shell
+cd lingkong-robot
+./install.sh
+```
+
+* 到这里你的环境安装就完成了
+
 
 ## 适配
 ----
