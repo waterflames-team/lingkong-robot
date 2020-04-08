@@ -93,7 +93,7 @@
 ```shell
 git clone https://gitee.com/lingkonggzs/lingkong-robot.git
 ```
-
+* 然后推荐你把web文件夹删了（那是暂存在这的官网，因为推荐项目自带page pro。说到推荐项目，希望大家多多点赞啊，万分感谢），不然有点占空间
 ### 开始安装：
 ----
 **首先你要保证你已经安装了python3和pip3，没安装的可以百度**
