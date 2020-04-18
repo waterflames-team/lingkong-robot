@@ -1,0 +1,270 @@
+<html>
+<head>
+
+<title>灵空·灵空机器人</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+
+<style>
+    body{background-color: #e6f7f5;color: rgb(0, 0, 0)}
+    #mineCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-dark navbar-expand-lg bg-primary">
+
+
+    <a class="navbar-brand" href="https://bot.lingkong.team/">灵空机器人</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://bot.lingkong.team/">首页</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://bot.lingkong.team/server.html">server版</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.lingkong.team/">去往团队首页——></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+<!--head、small-->
+<div class="container-fluid"><div class="row"><nav class="col-md-2 d-none d-md-block bg-light sidebar"><div class="sidebar-sticky"></div></nav></div>
+<div class="container-fluid"><div class="row"><nav class="col-md-2 d-none d-md-block bg-light sidebar"><div class="sidebar-sticky"></div></nav></div>
+<div class="container-fluid"><div class="row"><nav class="col-md-2 d-none d-md-block bg-light sidebar"><div class="sidebar-sticky"></div></nav></div>
+<!--head、small-->    
+
+
+<br>
+
+
+<div class="alert alert-primary" role="alert">
+    <h1 class="display-4">你好啊</h1>
+    <p class="lead">欢迎来到灵空机器人项目官网</p>
+    <a href='https://gitee.com/lingkonggzs/lingkong-robot/stargazers'><img src='https://gitee.com/lingkonggzs/lingkong-robot/badge/star.svg?theme=white' alt='star'></img></a>
+    <a href='https://gitee.com/lingkonggzs/lingkong-robot/members'><img src='https://gitee.com/lingkonggzs/lingkong-robot/badge/fork.svg?theme=white' alt='fork'></img></a>
+    <hr class="my-4">
+    <p>项目仓库：<a href="https://gitee.com/lingkonggzs/lingkong-robot">https://gitee.com/lingkonggzs/lingkong-robot</a></p>
+    <p>项目文档：<a href="http://botdocs.lingkong.team">http://botdocs.lingkong.team</a></p>
+  </div>
+
+
+
+<div class="alert alert-info" role="alert">
+
+    <h4 class="alert-heading">简介</h4>
+    <p>灵空机器人是一个由非凡小王开发、折腾调协助维护的灵活可配的中文语音对话机器人，并根据wukong-robot进行改编 （改编部分较多，主要借鉴了悟空后台端） 制作。灵空机器人可以做到语音唤醒，语音对话，正常的闲聊，以及查询天气等实用工具</p>
+    <hr>
+
+</div>
+
+<h1 class="display-4">项目主要的制作成员</h1>
+<hr>
+<br>
+
+<div class="row">
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">非凡小王</h5>
+          <p class="card-text">星空联合创始人，灵空创始人，曾是编程猫签约创作者，灵空机器人主要负责人、开发者</p>
+          <a href="https://www.ffxw0720.club" class="btn btn-primary">去他的博客</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">折腾调</h5>
+          <p class="card-text">灵空CEO，灵空机器人的readme、文档维护人员</p>
+          <a href="http://blog.lingkong.store:88" class="btn btn-primary">去他的博客</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Leo韩</h5>
+          <p class="card-text">灵空客服，负责回答问题以及和非凡小王传达</p>
+          <a href="http://leohan666.gitee.io/leohan/" class="btn btn-primary">去他的博客</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<br>
+
+<h1 class="display-4">运行方式</h1>
+<hr>
+<br>
+
+<p class="lead">图灵+灵空技能库+snowboy+baidu_tts、asr</p>
+
+
+<h1 class="display-4">有关技能的说明</h1>
+<hr>
+<br>
+
+<p class="lead">目前这个版本可能除闲聊外其他的技能会比较弱，因为没加语义理解，所以一定要和他的触发词对应，只能多，不能少（比如笑话技能的触发词是笑话，你说的话内就必须要有笑话两个字，你可以说“讲个笑话”，加上“讲个”两个字，但你不能说“笑”，因为里面没有“笑话”两个字）</p>
+<p class="lead">后续会在近2.0版本完善好大部分的体验，争取有和xiaolan （蓝之酱作品）、wukong （wzpan作品） 一样的体验</p>
+
+
+<h1 class="display-4">后台功能</h1>
+<hr>
+<br>
+
+<p class="lead">介绍：灵空机器人的基本介绍和文档跳转</p>
+<p class="lead">修改配置项教程：教你0.5.7.200316版怎么修改配置项（将在1或2版本改为直接更改配置）</p>
+<p class="lead">日志：本地的运行日志</p>
+<p class="lead">打赏：对作者非凡小王的打赏（厚颜无耻，手动滑稽）</p>
+<p class="lead">对话：与灵空机器人的文字对话，以便出门使用（在线版的雏形）</p>
+<p class="lead">清单：自己开发的技能“代办”的技能页（尚未开发完成）</p>
+
+<h1 class="display-4">访问后台时手机无左侧的菜单？</h1>
+<hr>
+<br>
+
+<p class="lead">方案一：部分手机横屏就可以出现左侧菜单</p>
+<p class="lead">方案二：记住路径（"/"为介绍页，"/ds"是打赏页,"/log"是日志页,"/study"是修改配置项教程页,"/dh"是对话页,"/list"是清单页，此路径适用于0.5.7.200316版）</p>
+
+
+<h1 class="display-4">快速安装</h1>
+<hr>
+<br>
+
+<p class="lead">首先你要确定你的运行环境是否正确，具体请参考<a href="http://botdocs.lingkong.team/1341350">此链接中的运行环境</a></p>
+<p class="lead">然后请执行以下步骤：</p>
+
+<figure class="highlight">
+  <pre>
+    <code class="language-html" data-lang="html">
+      <span class="nt">git clone https://gitee.com/lingkonggzs/lingkong-robot.git</span> 
+    </code>
+  </pre>
+</figure>
+
+<p class="lead">下载完成之后推荐你把web文件夹删了（那是暂存在这的官网，因为推荐项目自带page pro。说到推荐项目，希望大家多多点赞啊，万分感谢），不然有点占空间</p>
+<p class="lead">然后你要保证你已经安装了python3和pip3，没安装的可以百度</p>
+<p class="lead">接着你就可以做以下步骤了</p>
+
+<figure class="highlight">
+  <pre>
+    <code class="language-html" data-lang="html">
+      <span class="nt">cd lingkong-robot</span> 
+      <span class="nt">./install.sh</span> 
+    </code>
+  </pre>
+</figure>
+
+<p class="lead">详情进见文档，文档跳转链接位于最顶上</p>
+
+<h1 class="display-4">开发者计划</h1>
+<hr>
+<br>
+
+
+<h3>开发者计划全称：</h3>
+<p class="lead">灵空技能开发开发者计划</p>
+<p class="lead">因为只依靠官方制作技能，速度慢，效率低</p>
+<p class="lead">所以我们启动了开发者计划</p>
+<p class="lead">其主要是为了给灵空机器人的技能库提供更多技能</p>
+
+<br>
+
+<h3>如何参与：</h3>
+<p class="lead">加群即可</p>
+<p class="lead">群号：</p>
+<p class="lead">QQ群：923336032</p>
+<p class="lead">钉钉群：30626828</p>
+
+<br>
+
+<h3>如何贡献技能：</h3>
+<p class="lead">在<a href="https://gitee.com/lingkonggzs/lingkong-robot/tree/master/%E5%BC%80%E5%8F%91%E8%80%85%E8%AE%A1%E5%88%92%E7%9C%8B%E8%BF%99%E9%87%8C">这个文件夹下</a>，有一个文件，叫jineng.py</p>
+<p class="lead">打开它</p>
+<p class="lead">点击编辑按钮（打开文件后，文本区域右上角有编辑）</p>
+<p class="lead">先写一个class，class的名字就是技能名</p>
+<p class="lead">请在这个class里写，不要超出class，影响其他人贡献技能</p>
+<p class="lead">技能写完请在class的末尾注释上你的联系方式</p>
+<p class="lead">然后提交、</p>
+<p class="lead">通过是黑色，没通过是红色，审核中是绿色</p>
+<p class="lead">通过后我会进行适配，争取在下一个版本把已经审核通过的技能适配到机器人当中</p>
+
+<br>
+
+<h3>技能要求</h3>
+<p class="lead">1、可以文字交互（后期会被适配成语言交互）</p>
+<p class="lead">2、主题健康向上，并且有实际功能、作用</p>
+<p class="lead">3、如果这个作品是github或gitee或哪里摘抄来的，请在代码里注释原作者</p>
+<p class="lead">如果有附属文件，请联系作者</p>
+<p class="lead">最后，感谢每位参与灵空开发者计划的开发者！！！</p>
+
+
+
+<br>
+<hr>
+
+<footer class="bd-footer text-muted">
+    <div class="container-fluid p-3 p-md-5">
+        <p>
+
+            © 2020 lingkong | 
+            by ffxw0720 | 
+            所有代码均使用
+            <a href="https://gitee.com/lingkonggzs">
+                gitee
+            </a>
+            进行托管，请勿相信其他平台上的盗版
+
+            <div class="d-flex align-items-center">
+                <a href="#top" target="_self">返回顶部</a>
+            </div>
+        </p>
+      
+    </div>
+  </footer>
+
+
+
+<!--head、small-->
+</div>
+</div>
+</div>
+<!--head、small-->
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
