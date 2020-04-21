@@ -71,7 +71,7 @@
 # 运行环境
 ----
 > * 1.使用者如是win平台，那么请去deepin官网和virtualbox官网下载deepin的镜像和virtualbox的安装包，然后进行安装、装载镜像
->> * 2.如果你刚安装好deepin，请执行
+> * 2.如果你刚安装好deepin，请执行
 ```shell
     sudo apt update
     sudo apt-get install git
@@ -97,7 +97,7 @@ git clone https://gitee.com/lingkonggzs/lingkong-robot.git
 ### 开始安装：
 ----
 **首先你要保证你已经安装了python3和pip3，没安装的可以百度**
-
+**然后请执行以下指令**
 1.
 ```shell
 cd lingkong-robot
@@ -117,13 +117,13 @@ cd lingkong-robot
 * 此安装部分已在deepin、debian、rasbian上测试成功，如出现安装失败的情况，请联系非凡小王，qq:2822603942
 
 
-1. 首先你要下载好灵空机器人
+* 首先你要下载好灵空机器人
 ```shell
 git clone https://gitee.com/lingkonggzs/lingkong-robot.git
 ```
 * 然后推荐你把web文件夹删了（那是暂存在这的官网，因为推荐项目自带page pro。说到推荐项目，希望大家多多点赞啊，万分感谢），不然有点占空间
 
-2. 首先你要保证你已经安装了python3和pip3，没安装的可以百度
+* 首先你要保证你已经安装了python3和pip3，没安装的可以百度
 
 
 * 如果你想要换源可执行
@@ -138,13 +138,14 @@ wget http://download.lingkong-robot.online/change.sh
 sudo sh change.sh
 ```
 ***注意：这两条是需要分别执行的！！！在执行第二句时可能需要密码！输入并按下回车即可！！！）***
-### 如果你安装不成功，那么请去文档的介绍页联系作者
 
 3.
 ```shell
 cd lingkong-robot
 ./install.sh
 ```
+
+### 如果你安装不成功，那么请去文档的介绍页联系作者
 
 * 到这里你的环境安装就完成了
 
