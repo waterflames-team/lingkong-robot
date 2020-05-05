@@ -170,7 +170,11 @@ cd pei
 ```
 git clone https://github.com/Kitt-AI/snowboy.git
 ```
-#### 上面这是一行哈（窗口小的会分行，但终端里不要分行写）
+#### 上面这是一行哈（窗口小的会分行，但终端里不要分行写，如果过慢可以使用
+```
+git clone https://gitee.com/zhetengtiao/snowboy
+```
+这个来加快速度）
 
 ### 第四步：
 
