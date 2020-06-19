@@ -167,11 +167,11 @@ cd pei
 ### 第三步：
 
 #### 在终端输入：
-```
+```shell
 git clone https://github.com/Kitt-AI/snowboy.git
 ```
 #### 上面这是一行哈（窗口小的会分行，但终端里不要分行写，如果过慢可以使用
-```
+```shell
 git clone https://gitee.com/zhetengtiao/snowboy
 ```
 这个来加快速度）
@@ -179,7 +179,7 @@ git clone https://gitee.com/zhetengtiao/snowboy
 ### 第四步：
 
 #### 在终端输入
-```
+```shell
 cd snowboy/swig/Python3
 make
 ```
