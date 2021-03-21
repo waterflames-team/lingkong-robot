@@ -1,3 +1,4 @@
+# 此项目已于2021.3.21停止维护
 # 灵空机器人[![star](https://gitee.com/lingkonggzs/lingkong-robot/badge/star.svg?theme=gray)](https://gitee.com/lingkonggzs/lingkong-robot/stargazers)[![fork](https://gitee.com/lingkonggzs/lingkong-robot/badge/fork.svg?theme=gray)](https://gitee.com/lingkonggzs/lingkong-robot/members)![主要语言](https://img.shields.io/badge/语言-python3-lightgrey.svg)![版本](https://img.shields.io/badge/版本-V0.5.9.200321-lightgrey.svg)
 
 ----
