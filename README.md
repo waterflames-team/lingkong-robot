@@ -1,12 +1,12 @@
 # 此项目已于2021.3.21停止维护
-# 灵空机器人[![star](https://gitee.com/lingkonggzs/lingkong-robot/badge/star.svg?theme=gray)](https://gitee.com/lingkonggzs/lingkong-robot/stargazers)[![fork](https://gitee.com/lingkonggzs/lingkong-robot/badge/fork.svg?theme=gray)](https://gitee.com/lingkonggzs/lingkong-robot/members)![主要语言](https://img.shields.io/badge/语言-python3-lightgrey.svg)![版本](https://img.shields.io/badge/版本-V0.5.9.200321-lightgrey.svg)
+# 灵空机器人[![star](https://gitee.com/lkteam/lingkong-robot/badge/star.svg?theme=gray)](https://gitee.com/lkteam/lingkong-robot/stargazers)[![fork](https://gitee.com/lkteam/lingkong-robot/badge/fork.svg?theme=gray)](https://gitee.com/lkteam/lingkong-robot/members)![主要语言](https://img.shields.io/badge/语言-python3-lightgrey.svg)![版本](https://img.shields.io/badge/版本-V0.5.9.200321-lightgrey.svg)
 
 ----
 * 灵空机器人是一个由非凡小王开发、折腾调协助维护的灵活可配的中文语音对话机器人，并根据    wukong-robot进行改编（改编部分较多，主要借鉴了悟空后台端）。
 * 灵空机器人可以做到语音唤醒，语音对话，正常的闲聊，以及查询天气等实用工具
 # 跳转
 ----
-[灵空完整版文档](http://botdocs.lingkong.team)(包括灵空在线和灵空本地的使用说明)/[灵空在线](http://server.lingkong.store:888/)（账号随意，密码12345）
+[灵空完整版文档](http://botdocs.lkteam.cn)(包括灵空在线和灵空本地的使用说明)/[灵空在线](http://server.lingkong.store:888/)（账号随意，密码12345）
 # 目录
 ----
 - [运行方式](#运行方式)
@@ -20,7 +20,7 @@
 - [适配](#适配)
 - [运行](#运行)
 - [技能](#技能)
-- [开发者计划](https://gitee.com/lingkonggzs/lingkong-robot/tree/master/%E5%BC%80%E5%8F%91%E8%80%85%E8%AE%A1%E5%88%92%E7%9C%8B%E8%BF%99%E9%87%8C)
+- [开发者计划](https://gitee.com/lkteam/lingkong-robot/tree/master/%E5%BC%80%E5%8F%91%E8%80%85%E8%AE%A1%E5%88%92%E7%9C%8B%E8%BF%99%E9%87%8C)
 - [后台](#后台)
 
 
@@ -92,7 +92,7 @@
 
 * 首先你要下载好0.5.9.200321版的灵空机器人
 ```shell
-git clone https://gitee.com/lingkonggzs/lingkong-robot.git
+git clone https://gitee.com/lkteam/lingkong-robot.git
 ```
 * 然后推荐你把web文件夹删了（那是暂存在这的官网，因为推荐项目自带page pro。说到推荐项目，希望大家多多点赞啊，万分感谢），不然有点占空间
 ### 开始安装：
@@ -120,7 +120,7 @@ cd lingkong-robot
 
 * 首先你要下载好灵空机器人
 ```shell
-git clone https://gitee.com/lingkonggzs/lingkong-robot.git
+git clone https://gitee.com/lkteam/lingkong-robot.git
 ```
 * 然后推荐你把web文件夹删了（那是暂存在这的官网，因为推荐项目自带page pro。说到推荐项目，希望大家多多点赞啊，万分感谢），不然有点占空间
 
