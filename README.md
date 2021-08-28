@@ -6,7 +6,7 @@
 * 灵空机器人可以做到语音唤醒，语音对话，正常的闲聊，以及查询天气等实用工具。
 ## 关于旧版
 * 新版lingkong-robot v1.0正在开发中，关于旧版lingkong-robot v0.5的使用指南请见[灵空机器人旧版文档](https://xykong.yuque.com/books/share/7219010e-59e8-4c58-81d4-d6c16ba94703)。
-* 使用旧版的时候可以进入现在master分支下的`historic_version/v05`以使用旧版，也可以在发行版中找到[灵空机器人0.5.9.200321版](https://gitee.com/lkteam/lingkong-robot/releases/v0.5.9.200321)下载使用。
+* 使用旧版的时候可以进入现在master分支下的`stc/v05`以使用旧版，也可以在发行版中找到[灵空机器人0.5.9.200321版](https://gitee.com/lkteam/lingkong-robot/releases/v0.5.9.200321)下载使用。
 
 # 公告
 ----
