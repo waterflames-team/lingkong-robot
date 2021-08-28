@@ -145,7 +145,7 @@ def audioRecorderCallback(fname):#snowboy to asr
         pass
         next
     else:
-        lk.player.play('public/dong.wav')
+        lk.player.play('music/dong.wav')
     
     #asr
     IS_PY3 = sys.version_info.major == 3
@@ -697,11 +697,11 @@ def detectedCallback():
         
         h_sj = random.randint(1, 2)
         if h_sj==1:
-            lk.player.play('public/h1.mp3')
+            lk.player.play('music/h1.mp3')
         if h_sj==2:
-            lk.player.play('public/h2.mp3')
+            lk.player.play('music/h2.mp3')
     else:
-        lk.player.play('public/ding.wav')
+        lk.player.play('music/ding.wav')
 
 
 
@@ -729,7 +729,7 @@ model = lk.config.snowboy_conf()
 signal.signal(signal.SIGINT, signal_handler)
 detector = snowboydecoder.HotwordDetector(model, sensitivity=0.7)
 beg_name = lk.config.begin_conf()
-tts(beg_name+"你好啊，欢迎使用灵空机器人，快说出唤醒词来唤醒我吧")
+tts(beg_name+"你好啊，欢迎使用灵空机器人，快说出唤醒词来唤醒我吧，啾咪")
 
 
 

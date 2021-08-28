@@ -28,7 +28,6 @@ function check_and_install_python {
 }
 
 echo "---------- 欢迎使用 lingkong-robot 一键安装脚本 ----------"
-echo "---------- 本安装脚本由wukong-robot改编 ----------"
 system=$(uname -a)
 os_name=(${system// / })
 if [ ${os_name[0]} == "Darwin" ]
@@ -36,30 +35,30 @@ then
     read -p "您的系统是否为 MacOS? [Y/n]: " confirm
     if [[ ${confirm} != "Y" && ${confirm} != "y" && ${confirm} != "" ]]
     then
-        echo "安装失败：系统检测错误，已退出安装，请提出issues等待作者恢复"
+        echo "安装失败：系统检测错误，已退出安装"
         exit
     else
-        python ./install/scripts/install.py 1
+        python ./scripts/install.py 1
     fi
 elif [[ ${os_name[0]} == "Linux" && ${os_name[2]} =~ "Microsoft" ]]
 then   
     read -p "您的系统是否为win10子系统? [Y/n]:" confirm    
     if [[ ${confirm} != "Y" && ${confirm} != "y" && ${confirm} != "" ]]
     then
-        echo "安装失败：系统检测错误，已退出安装，请提出issues等待作者恢复"
+        echo "安装失败：系统检测错误，已退出安装"
         exit 1
     else
         check_and_install_python
-        python3 ./install/scripts/install.py 2
+        python3 ./scripts/install.py 2
     fi
 elif [[ ${os_name[0]} == "Linux" && ${os_name[1]} != "raspberrypi" ]]
 then
     if [[ ${confirm} != "Y" && ${confirm} != "y" && ${confirm} != "" ]]
     then
-        echo "安装失败，系统检测错误，已退出安装，请提出issues等待作者恢复"
+        echo "安装失败，系统检测错误，已退出安装，请反馈给作者"
         exit 1
     else
         check_and_install_python
-        python3 ./install/scripts/install.py 0
+        python3 ./scripts/install.py 0
     fi
 fi

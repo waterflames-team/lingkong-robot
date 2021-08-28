@@ -1,0 +1,246 @@
+<html>
+<head>
+
+<title>灵空·灵空机器人server版</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Content-Language" content="zh-CN">
+
+
+<style>
+    body{background-color: #e6f7f5;color: rgb(0, 0, 0)}
+    #mineCanvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+
+</head>
+<body>
+
+  <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
+
+
+    <a class="navbar-brand" href="https://bot.lkteam.cn/">灵空机器人</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://bot.lkteam.cn/">首页</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="https://bot.lkteam.cn/server">server版</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.lkteam.cn/">去往团队首页——></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+<!--head、small-->
+<div class="container-fluid"><div class="row"><nav class="col-md-2 d-none d-md-block bg-light sidebar"><div class="sidebar-sticky"></div></nav></div>
+<div class="container-fluid"><div class="row"><nav class="col-md-2 d-none d-md-block bg-light sidebar"><div class="sidebar-sticky"></div></nav></div>
+<div class="container-fluid"><div class="row"><nav class="col-md-2 d-none d-md-block bg-light sidebar"><div class="sidebar-sticky"></div></nav></div>
+<!--head、small-->    
+
+
+<br>
+
+
+<div class="alert alert-primary" role="alert">
+    <h1 class="display-4">你好啊</h1>
+    <p class="lead">欢迎来到灵空机器人server版项目官网</p>
+    <a href='https://gitee.com/lkteam/lingkong-robot-server/stargazers'><img src='https://gitee.com/lkteam/lingkong-robot-server/badge/star.svg?theme=white' alt='star'></img></a>
+    <a href='https://gitee.com/lkteam/lingkong-robot-server/members'><img src='https://gitee.com/lkteam/lingkong-robot-server/badge/fork.svg?theme=white' alt='fork'></img></a>
+    <hr class="my-4">
+    <p>项目仓库：<a href="https://gitee.com/lkteam/lingkong-robot-server">https://gitee.com/lkteam/lingkong-robot-server</a></p>
+    <p>项目文档：<a href="https://xykong.yuque.com/books/share/7219010e-59e8-4c58-81d4-d6c16ba94703">点击前往</a></p>
+</div>
+
+
+
+<div class="alert alert-info" role="alert">
+
+    <h4 class="alert-heading">简介</h4>
+    <p>灵空机器人是一个由非凡小王开发、折腾调协助维护的灵活可配的中文语音对话机器人，并根据wukong-robot进行改编 （改编部分较多，主要借鉴了悟空后台端） 制作。灵空机器人可以做到语音唤醒，语音对话，正常的闲聊，以及查询天气等实用工具，这个项目是非凡小王根据lingkong-robot所开发的在线版</p>
+    <hr>
+
+</div>
+
+<h1 class="display-4">项目主要的制作成员</h1>
+<hr>
+<br>
+
+<div class="row">
+
+    <div class="col-sm-6" style="margin: 10 0 0 0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">非凡小王</h5>
+          <p class="card-text">星空联合创始人，灵空创始人，曾是编程猫签约创作者，灵空机器人主要负责人、开发者</p>
+          <a href="https://www.ffxw0720.club" class="btn btn-primary">去他的博客</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6" style="margin: 10 0 0 0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">折腾调</h5>
+          <p class="card-text">灵空CEO，灵空机器人的代码维护人员</p>
+          <a href="http://blog.lingkong.store:88" class="btn btn-primary">去他的博客</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6" style="margin: 10 0 0 0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">曹操哥哥</h5>
+          <p class="card-text">灵空的readme、文档维护者</p>
+          <a href="https://www.cnblogs.com/caocaogege/" class="btn btn-primary">去他的博客</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6" style="margin: 10 0 0 0">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Leo韩</h5>
+          <p class="card-text">灵空客服，负责回答问题以及和非凡小王传达</p>
+          <a href="http://leohan666.gitee.io/leohan/" class="btn btn-primary">去他的博客</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+<br>
+
+<h1 class="display-4">在线版与本地版的区别</h1>
+<hr>
+<br>
+
+<p class="lead">①</p>
+
+<p class="lead">在线版：所有都无调用限制</p>
+  
+<p class="lead">本地版：前期因紧急，所以用的都是有限制次数的，在线版完工后本地版也会做无调用限制</p>
+
+
+<p class="lead">②</p>
+
+<p class="lead">在线版：支持win、安卓、ios、mac、linux等所有支持浏览器的平台，但体验到的东西比本地版少</p>
+  
+<p class="lead">本地版：仅支持mac、linux（目前只测试到了deepin，按常理debian也是相同道理，所以debian有可能也能用）平台，但是体验到的东西是最多的，作者的维护力度和更新力度也比在线版大</p>
+
+
+<h1 class="display-4">在线版功能</h1>
+<hr>
+<br>
+
+<p class="lead">介绍：灵空机器人的基本介绍和文档跳转</p>
+<p class="lead">修改配置项教程：教你0.5.7.200316版怎么修改配置项（将在1或2版本改为直接更改配置）</p>
+<p class="lead">打赏：对作者非凡小王的打赏（厚颜无耻，手动滑稽）</p>
+<p class="lead">对话：与灵空机器人的文字对话，以便出门使用（在线版的雏形）</p>
+<p class="lead">清单：自己开发的技能“代办”的技能页（尚未开发完成）</p>
+
+
+<h1 class="display-4">手机端无左侧的菜单？</h1>
+<hr>
+<br>
+
+<p class="lead">方案一：部分手机横屏就可以出现左侧菜单</p>
+<p class="lead">方案二：记住路径（"/"为介绍页，"/ds"是打赏页,"/log"是日志页,"/study"是修改配置项教程页,"/dh"是对话页,"/list"是清单页，此路径适用于0.5.7.200316版）</p>
+
+
+<h1 class="display-4">快速安装</h1>
+<hr>
+<br>
+
+<p class="lead">首先你要确定你的运行环境是否正确，</p>
+<p class="lead">然后请执行以下步骤：</p>
+
+<figure class="highlight">
+  <pre>
+    <code class="language-html" data-lang="html">
+      <span class="nt">git clone https://gitee.com/lkteam/lingkong-robot-server.git</span> 
+    </code>
+  </pre>
+</figure>
+
+<p class="lead">下载完成之后推荐你把web文件夹删了（那是暂存在这的官网，因为推荐项目自带page pro。说到推荐项目，希望大家多多点赞啊，万分感谢），不然有点占空间</p>
+<p class="lead">然后你要保证你已经安装了python3和pip3，没安装的可以百度</p>
+<p class="lead">接着你就可以做以下步骤了</p>
+
+<figure class="highlight">
+  <pre>
+    <code class="language-html" data-lang="html">
+      <span class="nt">cd lingkong-robot-server</span> 
+      <span class="nt">./install.sh</span> 
+    </code>
+  </pre>
+</figure>
+
+<p class="lead">详情进见文档，文档跳转链接位于最顶上</p>
+
+
+
+
+
+<br>
+<hr>
+
+<footer class="bd-footer text-muted">
+    <div class="container-fluid p-3 p-md-5">
+        <p>
+
+            © 2020 lingkong | 
+            by ffxw0720 | 
+            所有代码均使用
+            <a href="https://gitee.com/lkteam">
+                gitee
+            </a>、
+            <a href="https://github.com/LingKongTeam">
+                github
+            </a>
+            进行托管，请勿相信其他平台上的盗版
+
+            <div class="d-flex align-items-center">
+                <a href="#top" target="_self">返回顶部</a>
+            </div>
+        </p>
+      
+    </div>
+  </footer>
+
+
+
+<!--head、small-->
+</div>
+</div>
+</div>
+<!--head、small-->
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
