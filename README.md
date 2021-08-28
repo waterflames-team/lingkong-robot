@@ -1,4 +1,3 @@
-# 此项目已于2021.3.21停止维护
 # 灵空机器人[![star](https://gitee.com/lkteam/lingkong-robot/badge/star.svg?theme=gray)](https://gitee.com/lkteam/lingkong-robot/stargazers)[![fork](https://gitee.com/lkteam/lingkong-robot/badge/fork.svg?theme=gray)](https://gitee.com/lkteam/lingkong-robot/members)![主要语言](https://img.shields.io/badge/语言-python3-lightgrey.svg)![版本](https://img.shields.io/badge/版本-V0.5.9.200321-lightgrey.svg)
 
 ----
@@ -6,7 +5,14 @@
 * 灵空机器人可以做到语音唤醒，语音对话，正常的闲聊，以及查询天气等实用工具
 # 跳转
 ----
-[灵空完整版文档](http://botdocs.lkteam.cn)(包括灵空在线和灵空本地的使用说明)/[灵空在线](http://server.lingkong.store:888/)（账号随意，密码12345）
+[灵空完整版文档](https://xykong.yuque.com/books/share/7219010e-59e8-4c58-81d4-d6c16ba94703)
+
+# 公告
+----
+本项目与8月29日重新维护并开始重构2.0，敬请期待。
+
+近期将安排lingkong-robot与lingkong-robot-server依次进行重构，请耐心等待。
+
 # 目录
 ----
 - [运行方式](#运行方式)
