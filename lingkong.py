@@ -16,12 +16,12 @@ import uuid
 import logging
 from logging import handlers
 
-import lk.player
-import lk.config
-import shan
-from server import server
+import tools.player
+import tools.config
+import del
+from client import server
 
-modle = lk.config.snowboy_fk_conf()
+modle = tools.config.snowboy_fk_conf()
 '''
 1方案是：唤醒后说ding，然后录完音说dong
 2方案是：唤醒后说在呢或干嘛，录完音啥都不说
@@ -145,7 +145,7 @@ def audioRecorderCallback(fname):#snowboy to asr
         pass
         next
     else:
-        lk.player.play('public/dong.wav')
+        tools.player.play('public/dong.wav')
     
     #asr
     IS_PY3 = sys.version_info.major == 3
@@ -291,8 +291,8 @@ def audioRecorderCallback(fname):#snowboy to asr
     f = open("fname.txt",'r')#删除动作
     yuansheng = f.read()
     f.close()
-    shan.dele(yuansheng)
-    shan.dele("fname.txt")
+    del.dele(yuansheng)
+    del.dele("fname.txt")
 
     #asr
 
@@ -425,14 +425,14 @@ def tts(tts_text):
         fname = save_file
     #tts
     global player
-    lk.player.play('result.mp3')
+    tools.player.play('result.mp3')
     time.sleep(1)
-    shan.dele("result.mp3")
+    del.dele("result.mp3")
     log_log.logger.debug('已成功返回答复')
     log_log.logger.debug(tts_text)
     
     
-    shan.dele("result.txt")
+    del.dele("result.txt")
     
     
     history.appendHistory(1, tts_text)
@@ -501,10 +501,10 @@ class jineng():
 
 
 
-                KEY = lk.config.weater_id_conf()  
-                UID = lk.config.weater_key_conf()  
+                KEY = tools.config.weater_id_conf()  
+                UID = tools.config.weater_key_conf()  
 
-                LOCATION = lk.config.city_conf()  
+                LOCATION = tools.config.city_conf()  
                 API = 'https://api.seniverse.com/v3/weather/now.json'  
                 UNIT = 'c'  # 单位
                 LANGUAGE = 'zh-Hans'  # 查询结果的返回语言
@@ -569,7 +569,7 @@ class jineng():
                             if '待办' in jn_hua:
                                 jn_hua = re.sub(r'待办', '代办', jn_hua)
                             db_hua = re.sub(r'删除代办', ' ', jn_hua)
-                            shan.dele('daiban_log/'+db_hua)
+                            del.dele('daiban_log/'+db_hua)
                             tts('完事')
 
 
@@ -586,28 +586,28 @@ class jineng():
             #感谢图灵提供服务！！！
 
             url = 'http://openapi.tuling123.com/openapi/api/v2'
-            city = lk.config.city_conf()
-            apid = lk.config.tuling_id_conf()
+            city = tools.config.city_conf()
+            apid = tools.config.tuling_id_conf()
 
             sj = random.randint(1, 5)
             if sj == 1:
-                apikey = lk.config.tuling_key1_conf()
+                apikey = tools.config.tuling_key1_conf()
                 log_log.logger.debug("tuling_key1选择成功")
                 pass
             if sj == 2:
-                apikey = lk.config.tuling_key2_conf()
+                apikey = tools.config.tuling_key2_conf()
                 log_log.logger.debug("tuling_key2选择成功")
                 pass
             if sj == 3:
-                apikey = lk.config.tuling_key3_conf()
+                apikey = tools.config.tuling_key3_conf()
                 log_log.logger.debug("tuling_key3选择成功")
                 pass
             if sj == 4:
-                apikey = lk.config.tuling_key4_conf()
+                apikey = tools.config.tuling_key4_conf()
                 log_log.logger.debug("tuling_key4选择成功")
                 pass
             if sj == 5:
-                apikey = lk.config.tuling_key5_conf()
+                apikey = tools.config.tuling_key5_conf()
                 log_log.logger.debug("tuling_key5选择成功")
                 pass
         
@@ -692,16 +692,16 @@ jineng_s =jineng()
 
 
 def detectedCallback():
-    lk.player.stop()
+    tools.player.stop()
     if modle==2:
         
         h_sj = random.randint(1, 2)
         if h_sj==1:
-            lk.player.play('public/h1.mp3')
+            tools.player.play('public/h1.mp3')
         if h_sj==2:
-            lk.player.play('public/h2.mp3')
+            tools.player.play('public/h2.mp3')
     else:
-        lk.player.play('public/ding.wav')
+        tools.player.play('public/ding.wav')
 
 
 
@@ -725,10 +725,10 @@ if len(sys.argv) == 1:
 server.run(jineng_s,history,readlog_s)
 
 #model = sys.argv[1]
-model = lk.config.snowboy_conf()
+model = tools.config.snowboy_conf()
 signal.signal(signal.SIGINT, signal_handler)
 detector = snowboydecoder.HotwordDetector(model, sensitivity=0.7)
-beg_name = lk.config.begin_conf()
+beg_name = tools.config.begin_conf()
 tts(beg_name+"你好啊，欢迎使用灵空机器人，快说出唤醒词来唤醒我吧")
 
 
