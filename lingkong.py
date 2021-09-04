@@ -18,7 +18,7 @@ from logging import handlers
 
 import tools.player
 import tools.config
-import del
+import dele
 from client import server
 
 modle = tools.config.snowboy_fk_conf()
@@ -291,7 +291,7 @@ def audioRecorderCallback(fname):#snowboy to asr
     f = open("fname.txt",'r')#删除动作
     yuansheng = f.read()
     f.close()
-    del.dele(yuansheng)
+    dele.dele(yuansheng)
     del.dele("fname.txt")
 
     #asr
@@ -728,7 +728,7 @@ server.run(jineng_s,history,readlog_s)
 model = tools.config.snowboy_conf()
 signal.signal(signal.SIGINT, signal_handler)
 detector = snowboydecoder.HotwordDetector(model, sensitivity=0.7)
-beg_name = tools.config.begin_conf()
+beg_name = lk.config.begin_conf()
 tts(beg_name+"你好啊，欢迎使用灵空机器人，快说出唤醒词来唤醒我吧")
 
 
