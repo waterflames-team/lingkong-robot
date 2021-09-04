@@ -292,7 +292,7 @@ def audioRecorderCallback(fname):#snowboy to asr
     yuansheng = f.read()
     f.close()
     dele.dele(yuansheng)
-    del.dele("fname.txt")
+    dele.dele("fname.txt")
 
     #asr
 
@@ -427,12 +427,12 @@ def tts(tts_text):
     global player
     tools.player.play('result.mp3')
     time.sleep(1)
-    del.dele("result.mp3")
+    dele.dele("result.mp3")
     log_log.logger.debug('已成功返回答复')
     log_log.logger.debug(tts_text)
     
     
-    del.dele("result.txt")
+    dele.dele("result.txt")
     
     
     history.appendHistory(1, tts_text)
@@ -569,7 +569,7 @@ class jineng():
                             if '待办' in jn_hua:
                                 jn_hua = re.sub(r'待办', '代办', jn_hua)
                             db_hua = re.sub(r'删除代办', ' ', jn_hua)
-                            del.dele('daiban_log/'+db_hua)
+                            dele.dele('daiban_log/'+db_hua)
                             tts('完事')
 
 
