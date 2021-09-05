@@ -1,0 +1,21 @@
+RUN sudo pip3 install pydub
+RUN sudo apt-get install ffmpeg
+RUN sudo apt-get install portaudio19-dev
+RUN sudo apt-get install python-pyaudio python3-pyaudio sox
+RUN sudo apt-get install python3-pyaudio
+RUN sudo pip3 install pyaudio
+RUN sudo apt-get install pulseaudio
+RUN sudo pip3 install baidu\_aip
+RUN cd /etc/apt
+RUN sudo apt-get update
+RUN sudo apt-get install python-setuptools python-dev build-essential
+RUN sudo easy\_install pip
+RUN sudo pip3 install Flask
+RUN sudo pip3 install builtwith
+RUN sudo pip3 install requests
+RUN sudo apt-get install python3-tornado
+RUN cd ../
+RUN cd ../
+RUN sudo apt-get install swig
+RUN sudo apt-get install libatls-base-dev
+RUN echo "lingkong-robot 已安装完成!"

@@ -16,25 +16,11 @@ import uuid
 import logging
 from logging import handlers
 
-import tools.player
-import tools.config
-import dele
-from client import server
+import lk.player
+import shan
+from server import server
 
-modle = tools.config.snowboy_fk_conf()
-'''
-1方案是：唤醒后说ding，然后录完音说dong
-2方案是：唤醒后说在呢或干嘛，录完音啥都不说
-默认为方案1
-'''
 
-py = int(sys.version_info.major)
-print(py)
-if py == 3:
-    pass
-else:
-    print("请使用python3运行")
-    sys.exit(0)
 
 interrupted = False
 player = None
@@ -44,9 +30,6 @@ jineng_s = None
 readlog_s = None
 logger = None
 logger_go = 1
-global config
-config = None
-
 
 
 #沙雕取log----------------------------------------------------------------------------------
@@ -106,8 +89,6 @@ readlog_s = read_log_s
 
 #机器人主体分界线-------------------------------------------------------------------------------------
 
-
-
 #web对话
 class History():
 
@@ -141,21 +122,29 @@ def audioRecorderCallback(fname):#snowboy to asr
     f = open("fname.txt",'r')
     yuansheng = f.read()
     
-    if modle==2:
-        pass
-        next
-    else:
-        tools.player.play('public/dong.wav')
+
+    lk.player.play('music/dong.wav')
     
     #asr
     IS_PY3 = sys.version_info.major == 3
 
+    if IS_PY3:
+        from urllib.request import urlopen
+        from urllib.request import Request
+        from urllib.error import URLError
+        from urllib.parse import urlencode
+        timer = time.perf_counter
+    else:
+        from urllib2 import urlopen
+        from urllib2 import Request
+        from urllib2 import URLError
+        from urllib import urlencode
+        if sys.platform == "win32":
+            timer = time.clock
+        else:
+        
+            timer = time.time
 
-    from urllib.request import urlopen
-    from urllib.request import Request
-    from urllib.error import URLError
-    from urllib.parse import urlencode
-    timer = time.perf_counter
 
 
     API_KEY = 'kVcnfD9iW2XVZSMaLMrtLYIz'
@@ -277,7 +266,21 @@ def audioRecorderCallback(fname):#snowboy to asr
       
 
     log_log.logger.debug('-------------')  
+    '''
+    cg = result_str
+    
+    cg = re.sub("[A-Za-z0-9\!\%\[\]\,\。]", "", cg)
+    cg = re.sub(r'}', '', cg)
+    cg = re.sub(r'{', '', cg)
+    cg = re.sub(r'_', '', cg)
+    cg = re.sub(r'"', '', cg)
+    cg = re.sub(r':', '', cg)
+    log_log.logger.debug('成功识别到文字')
+    log_log.logger.debug(cg)
+    #令人震惊的去杂符号操作
+    
 
+    '''
     cg = json.loads(result_str)
     
   
@@ -287,12 +290,6 @@ def audioRecorderCallback(fname):#snowboy to asr
     log_log.logger.debug('-------------')
 
     jineng.jineng(0,cg)#调用技能
-
-    f = open("fname.txt",'r')#删除动作
-    yuansheng = f.read()
-    f.close()
-    dele.dele(yuansheng)
-    dele.dele("fname.txt")
 
     #asr
 
@@ -323,7 +320,6 @@ def tts(tts_text):
 
 
     TEXT = tts_text#要识别的文字
-    
 
 
     # 发音人选择, 基础音库：0为度小美，1为度小宇，3为度逍遥，4为度丫丫，
@@ -425,14 +421,16 @@ def tts(tts_text):
         fname = save_file
     #tts
     global player
-    tools.player.play('result.mp3')
+    lk.player.play('result.mp3')
     time.sleep(1)
-    dele.dele("result.mp3")
+    shan.dele("result.mp3")
     log_log.logger.debug('已成功返回答复')
     log_log.logger.debug(tts_text)
     
-    
-    dele.dele("result.txt")
+    f = open("fname.txt",'r')
+    yuansheng = f.read()
+    f.close()
+    shan.dele(yuansheng)
     
     
     history.appendHistory(1, tts_text)
@@ -442,8 +440,6 @@ def tts(tts_text):
     f.close()       
     readlog_s = read_log_s
     server.hread(readlog_s)
-
-    log_log.logger.debug('按Ctrl +4 退出程序')
 
     pass
     
@@ -467,67 +463,12 @@ class jineng():
                 if "你爸爸" in jn_hua or "你的爸爸" in jn_hua:
                     tts("我爸比是非凡小王！")
 
-        def xsh():
-            if "学我说" in jn_hua:
-                sxh_hua_z = None
-                sxh_hua_z = re.sub(r'学我说', ' ', jn_hua)
-                tts(sxh_hua_z)
-
         class xiaohua():
             if '笑话' in jn_hua:
-
-                xh_f = open("xh.json",'r')
-                xh_ji = xh_f.read()
-                xh_f.close()
-
-                xh_ji = str(xh_ji)
-
-                xh_jg = json.loads(xh_ji)
-                xh_jg = xh_jg["result"][str(random.randint(1, 40))]["text"]
-
+                xh = open(('xh_ku/' + str(random.randint(1, 40)) + '.txt'), mode='r',buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
+                xh_jg = xh.read()
                 tts(xh_jg)
 
-
-        class weather():
-
-            if "天气" in jn_hua:
-
-                global LOCATION
-                global API
-                global UNIT
-                global LANGUAGE
-                global KEY
-                global UID
-
-
-
-                KEY = tools.config.weater_id_conf()  
-                UID = tools.config.weater_key_conf()  
-
-                LOCATION = tools.config.city_conf()  
-                API = 'https://api.seniverse.com/v3/weather/now.json'  
-                UNIT = 'c'  # 单位
-                LANGUAGE = 'zh-Hans'  # 查询结果的返回语言
-                
-                def run_wea():
-                    if __name__ == '__main__':
-                        location = LOCATION
-
-                        result = requests.get(API, params={
-                            'key': KEY,
-                            'location': location,
-                            'language': LANGUAGE,
-                            'unit': UNIT
-                        }, timeout=1)
-                        wea_test = result.text
-
-                        result = wea_test
-                        reu = str(result)
-                        re = json.loads(reu)
-                        text_one=re['results'][0]['location']['name']
-                        text_two=re['results'][0]['now']['text']
-                        text_three=re['results'][0]['now']['temperature']
-                        tts(text_one+","+text_two+",温度"+text_three+"摄氏度")
 
         class daiban():
 
@@ -541,7 +482,7 @@ class jineng():
                 if '进入' in jn_hua:
                     jn_hua = re.sub(r'进入', '记录', jn_hua)
 
-                class daiban(object):
+                class daiban(object):#灵空robot代办技能demo
 
                     def rukou(self,qidong):
 
@@ -569,7 +510,7 @@ class jineng():
                             if '待办' in jn_hua:
                                 jn_hua = re.sub(r'待办', '代办', jn_hua)
                             db_hua = re.sub(r'删除代办', ' ', jn_hua)
-                            dele.dele('daiban_log/'+db_hua)
+                            shan.dele('daiban_log/'+db_hua)
                             tts('完事')
 
 
@@ -583,34 +524,40 @@ class jineng():
 
         def tuling(t_hua):
         
-            #感谢图灵提供服务！！！
+        
 
-            url = 'http://openapi.tuling123.com/openapi/api/v2'
-            city = tools.config.city_conf()
-            apid = tools.config.tuling_id_conf()
+            url='http://openapi.tuling123.com/openapi/api/v2'
+            city="福州"#请自行在这里修改城市为自己的城市
 
             sj = random.randint(1, 5)
             if sj == 1:
-                apikey = tools.config.tuling_key1_conf()
+                apikey = "197deae9fb5c4fb3bfd970d82917aeb0"
                 log_log.logger.debug("tuling_key1选择成功")
                 pass
             if sj == 2:
-                apikey = tools.config.tuling_key2_conf()
+                apikey = "ed984644aa50485ea0106b941de1f521"
                 log_log.logger.debug("tuling_key2选择成功")
                 pass
             if sj == 3:
-                apikey = tools.config.tuling_key3_conf()
+                apikey = "22fdeb0cfcc146b0a3acb76241d80eaf"
                 log_log.logger.debug("tuling_key3选择成功")
                 pass
             if sj == 4:
-                apikey = tools.config.tuling_key4_conf()
+                apikey = "e9c5c5121ccd4450a559c77fdc934b8a"
                 log_log.logger.debug("tuling_key4选择成功")
                 pass
             if sj == 5:
-                apikey = tools.config.tuling_key5_conf()
+                apikey = "3a952ac21d8a4c079e59aedc36791bb2"
                 log_log.logger.debug("tuling_key5选择成功")
                 pass
         
+
+            '''
+            较多人使用同样5个apikey，一天只能调用500次，难免会不够，
+            所以有能力的小伙伴我推荐自己去图灵机器人的首页注册一个自己的账号，实名制一下
+            然后把机器人管理页面的右上角的账号填到"userId"的冒号后面（在下面的req>"userInfo">"userId"里）
+            我这里的apikey只给实在是没能力去实名制使用的人以及灵空机器人的测试员
+            '''
 
 
             a = t_hua
@@ -633,7 +580,7 @@ class jineng():
                 },
                 "userInfo": {
                     "apiKey": apikey,
-                    "userId": apid 
+                    "userId": "450562"#如果你改了apikey，请把这也改了
                 }
             }
             req=json.dumps(req).encode('utf8')
@@ -661,14 +608,6 @@ class jineng():
             daiban()
             next
             pass
-        elif "学我说" in jn_hua:
-            xsh()
-            next
-            pass
-        elif "天气" in jn_hua:
-            weather.run_wea()
-            next
-            pass
         else:
             tuling(jn_hua)
             next
@@ -692,16 +631,8 @@ jineng_s =jineng()
 
 
 def detectedCallback():
-    tools.player.stop()
-    if modle==2:
-        
-        h_sj = random.randint(1, 2)
-        if h_sj==1:
-            tools.player.play('public/h1.mp3')
-        if h_sj==2:
-            tools.player.play('public/h2.mp3')
-    else:
-        tools.player.play('public/ding.wav')
+    lk.player.stop()
+    lk.player.play('music/ding.wav')
 
 
 
@@ -725,12 +656,13 @@ if len(sys.argv) == 1:
 server.run(jineng_s,history,readlog_s)
 
 #model = sys.argv[1]
-model = tools.config.snowboy_conf()
+model = "snowboy/snowboy.umdl"#自己改唤醒模型路径
 signal.signal(signal.SIGINT, signal_handler)
 detector = snowboydecoder.HotwordDetector(model, sensitivity=0.7)
-beg_name = lk.config.begin_conf()
-tts(beg_name+"你好啊，欢迎使用灵空机器人，快说出唤醒词来唤醒我吧")
-
+lk.player.play("music/begin.mp3")
+time.sleep(5)
+log_log.logger.debug('正在聆听.......按Ctrl +c 退出聆听')
+log_log.logger.debug('按Ctrl +4 退出程序')
 
 
 detector.start(detected_callback=detectedCallback,
