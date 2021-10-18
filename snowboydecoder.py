@@ -2,7 +2,7 @@
 
 import collections
 import pyaudio
-import pei.snowboy.swig.Python3.snowboydetect
+#import pei.snowboy.swig.Python3.snowboydetect
 import time
 import wave
 import os
@@ -106,8 +106,8 @@ class HotwordDetector(object):
             sensitivity = [sensitivity]
         model_str = ",".join(decoder_model)
 
-        self.detector = pei.snowboy.swig.Python3.snowboydetect.SnowboyDetect(
-            resource_filename=resource.encode(), model_str=model_str.encode())
+        #self.detector = pei.snowboy.swig.Python3.snowboydetect.SnowboyDetect(
+            #resource_filename=resource.encode(), model_str=model_str.encode())
         self.detector.SetAudioGain(audio_gain)
         self.detector.ApplyFrontend(apply_frontend)
         self.num_hotwords = self.detector.NumHotwords()

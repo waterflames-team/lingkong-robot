@@ -134,7 +134,7 @@ settings = {
     "cookie_secret": "__TODO:_GENERATE_YOUR_OWN_RANDOM_VALUE_HERE__",
     "template_path": "server/template",
     "static_path": "server/static",
-    "debug": Flase#正式发布请改Flase
+    #"debug": Flase#正式发布请改Flase
 }
 def make_app():
     return tornado.web.Application([

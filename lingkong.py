@@ -76,7 +76,7 @@ log_log.logger.debug('''
 ---------------------------------------
         灵空-一个中文语音对话机器人 
         版本号：0.5.9.200321
-        by ffxw0720                
+        by Epeiuss                
         欢迎使用!!!                              
 ---------------------------------------
 
@@ -461,7 +461,7 @@ class jineng():
         
             def father():
                 if "你爸爸" in jn_hua or "你的爸爸" in jn_hua:
-                    tts("我爸比是非凡小王！")
+                    tts("我爸比是Epeiuss！")
 
         class xiaohua():
             if '笑话' in jn_hua:
